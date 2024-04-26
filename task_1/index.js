@@ -3,7 +3,7 @@ import {encoded, translations} from './data.js'
 function makeDecode(encoded, translations) {
     const noEntryKeys = ['groupId', 'service', 'formatSize', 'ca']
     const unique = []
-    const decoded = encoded.map((item, i) => {
+    const decoded = encoded.map((item) => {
         const keys = Object.keys(item).filter((key) => !noEntryKeys.includes(key))
         const translationsMap = new Map(Object.entries(translations))
         keys.forEach((key) => {
